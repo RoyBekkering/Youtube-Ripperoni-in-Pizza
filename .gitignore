@@ -187,3 +187,6 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+/Youtube-Ripperoni-in-Pizza/packages/Newtonsoft.Json.6.0.6
+/Youtube-Ripperoni-in-Pizza/packages/YoutubeExtractor.0.10.6
+/Youtube-Ripperoni-in-Pizza/packages/repositories.config
