@@ -16,5 +16,10 @@ namespace Youtube_Ripperoni_in_Pizza
         {
             InitializeComponent();
         }
+
+        private void tableLayout_Downloads_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
