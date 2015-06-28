@@ -42,10 +42,10 @@
             this.tableLayout_Options = new System.Windows.Forms.TableLayoutPanel();
             this.checkBox_DownloadQueue = new System.Windows.Forms.CheckBox();
             this.checkBox_CloseAfterLast = new System.Windows.Forms.CheckBox();
-            this.textBox_Search = new Youtube_Ripperoni_in_Pizza.Controls.TextBoxPlaceHolder();
             this.comboBox_VideoType = new System.Windows.Forms.ComboBox();
             this.dataGridView_Content = new System.Windows.Forms.DataGridView();
             this.dataGridView_Downloads = new System.Windows.Forms.DataGridView();
+            this.textBox_Search = new Youtube_Ripperoni_in_Pizza.Controls.TextBoxPlaceHolder();
             ((System.ComponentModel.ISupportInitialize)(this.splitView_Main)).BeginInit();
             this.splitView_Main.Panel1.SuspendLayout();
             this.splitView_Main.Panel2.SuspendLayout();
@@ -173,7 +173,7 @@
             this.tableLayout_Filters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayout_Filters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayout_Filters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayout_Filters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
+            this.tableLayout_Filters.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
             this.tableLayout_Filters.Controls.Add(this.checkBox_Audio, 4, 0);
             this.tableLayout_Filters.Controls.Add(this.comboBox_Resolution, 0, 0);
             this.tableLayout_Filters.Controls.Add(this.comboBox_AudioBitRate, 3, 0);
@@ -262,18 +262,6 @@
             this.checkBox_CloseAfterLast.Text = "Close after Last";
             this.checkBox_CloseAfterLast.UseVisualStyleBackColor = true;
             // 
-            // textBox_Search
-            // 
-            this.textBox_Search.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_Search.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.textBox_Search.Location = new System.Drawing.Point(3, 4);
-            this.textBox_Search.Margin = new System.Windows.Forms.Padding(3, 4, 3, 3);
-            this.textBox_Search.Name = "textBox_Search";
-            this.textBox_Search.Placeholder = "Search Youtube...";
-            this.textBox_Search.Size = new System.Drawing.Size(367, 20);
-            this.textBox_Search.TabIndex = 2;
-            this.textBox_Search.Text = "Search Youtube...";
-            // 
             // comboBox_VideoType
             // 
             this.comboBox_VideoType.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -300,6 +288,18 @@
             this.dataGridView_Downloads.Name = "dataGridView_Downloads";
             this.dataGridView_Downloads.Size = new System.Drawing.Size(474, 505);
             this.dataGridView_Downloads.TabIndex = 1;
+            // 
+            // textBox_Search
+            // 
+            this.textBox_Search.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_Search.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.textBox_Search.Location = new System.Drawing.Point(3, 4);
+            this.textBox_Search.Margin = new System.Windows.Forms.Padding(3, 4, 3, 3);
+            this.textBox_Search.Name = "textBox_Search";
+            this.textBox_Search.Placeholder = "Search Youtube...";
+            this.textBox_Search.Size = new System.Drawing.Size(367, 20);
+            this.textBox_Search.TabIndex = 2;
+            this.textBox_Search.Text = "Search Youtube...";
             // 
             // MainForm
             // 
