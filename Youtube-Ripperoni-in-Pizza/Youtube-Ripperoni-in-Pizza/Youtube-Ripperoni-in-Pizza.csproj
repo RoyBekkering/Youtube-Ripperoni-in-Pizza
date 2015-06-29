@@ -52,6 +52,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\ContentSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ContentSearch.Designer.cs">
+      <DependentUpon>ContentSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Downloads.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Downloads.Designer.cs">
+      <DependentUpon>Downloads.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TextBoxPlaceHolder.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -61,8 +73,17 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Display\VideoDisplay.cs" />
+    <Compile Include="Models\Video.cs" />
+    <Compile Include="Models\VideoInformation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\ContentSearch.resx">
+      <DependentUpon>ContentSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Downloads.resx">
+      <DependentUpon>Downloads.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,10 +112,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Classes\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="SampleCode.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\xFinished\MediaLibrary\YoutubeAPI\YoutubeAPI.csproj">
+      <Project>{cf6e6204-8c3d-43e4-b56a-e89e548f596d}</Project>
+      <Name>YoutubeAPI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

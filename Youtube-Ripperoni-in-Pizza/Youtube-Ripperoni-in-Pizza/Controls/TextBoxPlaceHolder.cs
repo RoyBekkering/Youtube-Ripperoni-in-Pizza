@@ -1,18 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Youtube_Ripperoni_in_Pizza.Controls
 {
-    class TextBoxPlaceHolder : TextBox
+    public class TextBoxPlaceHolder : TextBox
     {
         #region Properties
-        string placeHolder = string.Empty;
+
+        private string placeHolder = string.Empty;
 
         [Category("Placeholder")]
         [Description("Sets the text of the placeholder")]
@@ -25,6 +22,7 @@ namespace Youtube_Ripperoni_in_Pizza.Controls
                 DrawPlaceHolder();
             }
         }
+
         #endregion Properties
 
         public TextBoxPlaceHolder()
@@ -55,7 +53,7 @@ namespace Youtube_Ripperoni_in_Pizza.Controls
             }
         }
 
-        void ThisOnLeave(object sender, EventArgs e)
+        private void ThisOnLeave(object sender, EventArgs e)
         {
             if(this.Text.Length == 0) {
                 DrawPlaceHolder();
