@@ -114,13 +114,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="SampleCode.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\xFinished\MediaLibrary\YoutubeAPI\YoutubeAPI.csproj">
+    <ProjectReference Include="..\YoutubeAPI\YoutubeAPI.csproj">
       <Project>{cf6e6204-8c3d-43e4-b56a-e89e548f596d}</Project>
       <Name>YoutubeAPI</Name>
     </ProjectReference>

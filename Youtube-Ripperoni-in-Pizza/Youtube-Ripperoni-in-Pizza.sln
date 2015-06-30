@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Youtube-Ripperoni-in-Pizza", "Youtube-Ripperoni-in-Pizza\Youtube-Ripperoni-in-Pizza.csproj", "{7FDD3F30-A6A2-4F95-81BF-2B9E720B9C9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeAPI", "..\..\xFinished\MediaLibrary\YoutubeAPI\YoutubeAPI.csproj", "{CF6E6204-8C3D-43E4-B56A-E89E548F596D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeAPI", "YoutubeAPI\YoutubeAPI.csproj", "{CF6E6204-8C3D-43E4-B56A-E89E548F596D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
