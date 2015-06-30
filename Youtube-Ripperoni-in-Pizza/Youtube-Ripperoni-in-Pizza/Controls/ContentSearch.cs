@@ -21,6 +21,25 @@ namespace Youtube_Ripperoni_in_Pizza.Controls
         public ContentSearch()
         {
             InitializeComponent();
+            Initialize();
+        }
+
+        private void Initialize()
+        {
+            DataGridViewColumn column = new DataGridViewTextBoxColumn();
+            column.HeaderText = "Name";
+            column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridView_Content.Columns.Add(column);
+
+            DataGridViewColumn column2 = new DataGridViewTextBoxColumn();
+            column2.HeaderText = "Description";
+            column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridView_Content.Columns.Add(column2);
+
+            DataGridViewColumn column3 = new DataGridViewTextBoxColumn();
+            column3.HeaderText = "Channel";
+            column3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridView_Content.Columns.Add(column3);
         }
 
         /// <summary>
@@ -63,7 +82,8 @@ namespace Youtube_Ripperoni_in_Pizza.Controls
             if(currentInfos != null) {
                 List<VideoInfo> videos;
                 if(checkBox_OnlyAudio.Checked) {
-                    videos = currentInfos.Where(v => v.AudioType.ToString().Equals(comboBox_AudioType.SelectedItem.ToString().Replace(".", ""))).ToList();
+                    videos = currentInfos.Where(v => v.CanExtractAudio && v.AudioType.ToString().Equals(comboBox_AudioType.SelectedItem.ToString().Replace(".", "")))
+                        .OrderByDescending(info => info.AudioBitrate).ToList();
                 }
                 else {
                     videos = currentInfos.Where(v => v.Resolution.ToString().Equals(comboBox_Resolution.SelectedItem.ToString().Replace("p", "")) &&
@@ -71,7 +91,10 @@ namespace Youtube_Ripperoni_in_Pizza.Controls
                 }
 
                 if(videos != null && videos.Count > 0) {
-                    DownloadControl.AddDownload(videos[0]);
+                    DownloadControl.AddDownload(videos[0], checkBox_OnlyAudio.Checked);
+                }
+                else {
+                    MessageBox.Show("No video's found with the selected options", "No Videos Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -152,6 +175,7 @@ namespace Youtube_Ripperoni_in_Pizza.Controls
 
             checkBox_OnlyAudio.Enabled = value;
             button_AddDownload.Enabled = value;
+            tableLayout_Filters.UseWaitCursor = !value;
         }
 
         #region Events
