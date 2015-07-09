@@ -6,7 +6,7 @@ namespace YoutubeAPI.Classes
     public static class URLBuilder
     {
         private const string BASE_URL = "https://www.googleapis.com/youtube/v3/";
-        private const string API_KEY = "AIzaSyABbqipoewW2D3sR23EngINucFN8DdS0fE";
+        private const string API_KEY = "<YOUR_API_KEY>";
 
         private const string VIDEOS_URL = "videos";
         private const string CHANNEL_URL = "channels?part=contentDetails";
